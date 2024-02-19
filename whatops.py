@@ -83,6 +83,8 @@ def format_op_counts(op_counts):
 
 
 def whatops(model_name):
+    if model_name.startswith("/"):
+        model_name = model_name[1:]
     onnx_file_path = f"{model_name.replace('/', '_')}.onnx"
     # export if not exist
     if not os.path.exists(onnx_file_path):

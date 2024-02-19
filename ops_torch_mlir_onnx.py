@@ -64,6 +64,11 @@ def get_supported_ops() -> List[Tuple[str, int]]:
     json.dump(all_supported_ops, open(cache_file_name, "w"))
     return all_supported_ops
 
+
+
+
+
+
 if __name__ == "__main__":
     all_supported_ops = get_supported_ops()
     print("\nAll Supported Operations and Versions:")
